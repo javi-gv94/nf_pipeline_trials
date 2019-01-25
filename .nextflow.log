@@ -1,0 +1,81 @@
+Jan-25 14:37:52.051 [main] DEBUG nextflow.cli.Launcher - $> /home/jgarrayo/bin/nextflow run main.nf
+Jan-25 14:37:52.211 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 18.10.1
+Jan-25 14:37:52.221 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [soggy_legentil] - revision: f81a6104f3
+Jan-25 14:37:52.234 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/nextflow.config
+Jan-25 14:37:52.235 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/nextflow.config
+Jan-25 14:37:52.258 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-25 14:37:52.578 [main] DEBUG nextflow.Session - Session uuid: 4a30d464-dc01-44f6-b5f1-5cf3ecf8e672
+Jan-25 14:37:52.578 [main] DEBUG nextflow.Session - Run name: soggy_legentil
+Jan-25 14:37:52.578 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jan-25 14:37:52.588 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 18.10.1 build 5003
+  Modified: 24-10-2018 14:03 UTC (16:03 CEST)
+  System: Linux 4.4.0-141-generic
+  Runtime: Groovy 2.5.3 on OpenJDK 64-Bit Server VM 1.8.0_191-8u191-b12-0ubuntu0.16.04.1-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 28338@bsclife020 [84.88.51.235]
+  CPUs: 8 - Mem: 62.8 GB (34.6 GB) - Swap: 0 (0)
+Jan-25 14:37:52.608 [main] DEBUG nextflow.Session - Work-dir: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/work [ext2/ext3]
+Jan-25 14:37:52.608 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/bin
+Jan-25 14:37:53.017 [main] DEBUG nextflow.Session - Session start invoked
+Jan-25 14:37:53.019 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Jan-25 14:37:53.020 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Jan-25 14:37:53.307 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-25 14:37:53.316 [main] INFO  nextflow.Nextflow - P I P E L I N E    
+    =============================
+    genome: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/data/transcripts.fasta.gz
+    annot : /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/data/reads_1.fastq.gz
+    reads : /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/data/reads_2.fastq.gz
+    outdir: out
+
+Jan-25 14:37:53.464 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Jan-25 14:37:53.464 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Jan-25 14:37:53.469 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Jan-25 14:37:53.471 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Jan-25 14:37:53.475 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=62.8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Jan-25 14:37:53.478 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Jan-25 14:37:53.479 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jan-25 14:37:53.481 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Jan-25 14:37:53.528 [main] DEBUG nextflow.Session - >>> barrier register (process: indexation)
+Jan-25 14:37:53.530 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > indexation -- maxForks: 8
+Jan-25 14:37:53.571 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Jan-25 14:37:53.571 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Jan-25 14:37:53.572 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Jan-25 14:37:53.573 [main] DEBUG nextflow.Session - >>> barrier register (process: quantification)
+Jan-25 14:37:53.573 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > quantification -- maxForks: 8
+Jan-25 14:37:53.581 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Jan-25 14:37:53.581 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Jan-25 14:37:53.581 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Jan-25 14:37:53.582 [main] DEBUG nextflow.Session - >>> barrier register (process: exportRObject)
+Jan-25 14:37:53.582 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > exportRObject -- maxForks: 8
+Jan-25 14:37:53.585 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Jan-25 14:37:53.585 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Jan-25 14:37:53.585 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Jan-25 14:37:53.589 [main] DEBUG nextflow.Session - >>> barrier register (process: collectOutput)
+Jan-25 14:37:53.589 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > collectOutput -- maxForks: 8
+Jan-25 14:37:53.591 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jan-25 14:37:53.591 [main] DEBUG nextflow.Session - Session await
+Jan-25 14:37:53.656 [Task submitter] WARN  nextflow.executor.BashWrapperBuilder - Process `indexation` uses an executable container -- This feature has been deprecated and will be removed in a future release
+Jan-25 14:37:53.678 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 14:37:53.681 [Task submitter] INFO  nextflow.Session - [c5/4a7ee0] Submitted process > indexation
+Jan-25 14:37:54.550 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: indexation; status: COMPLETED; exit: 0; error: -; workDir: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/work/c5/4a7ee0828529161d3a468d606f7092]
+Jan-25 14:37:54.570 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: indexation)
+Jan-25 14:37:54.578 [Task submitter] WARN  nextflow.executor.BashWrapperBuilder - Process `quantification` uses an executable container -- This feature has been deprecated and will be removed in a future release
+Jan-25 14:37:54.583 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 14:37:54.584 [Task submitter] INFO  nextflow.Session - [8a/5872cd] Submitted process > quantification
+Jan-25 14:37:55.520 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: quantification; status: COMPLETED; exit: 0; error: -; workDir: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/work/8a/5872cdad5fe0327ad0f62b0921c63c]
+Jan-25 14:37:55.521 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: quantification)
+Jan-25 14:37:55.527 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 14:37:55.527 [Task submitter] INFO  nextflow.Session - [f5/1d8423] Submitted process > exportRObject
+Jan-25 14:37:56.928 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: exportRObject; status: COMPLETED; exit: 0; error: -; workDir: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/work/f5/1d84239f09ed35cfa10ef33a4df884]
+Jan-25 14:37:56.936 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: exportRObject)
+Jan-25 14:37:56.941 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 14:37:56.941 [Task submitter] INFO  nextflow.Session - [ad/720691] Submitted process > collectOutput
+Jan-25 14:37:56.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: collectOutput; status: COMPLETED; exit: 0; error: -; workDir: /home/jgarrayo/nextflow_tutorial/nf_pipeline_trials/work/ad/720691c1c67a199bb746c1449dc828]
+Jan-25 14:37:56.953 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: collectOutput)
+Jan-25 14:37:56.954 [main] DEBUG nextflow.Session - Session await > all process finished
+Jan-25 14:37:56.954 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Jan-25 14:37:56.955 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-25 14:37:56.963 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=4; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=2.9s; failedDuration=0ms; cachedDuration=0ms]
+Jan-25 14:37:56.970 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jan-25 14:37:57.038 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

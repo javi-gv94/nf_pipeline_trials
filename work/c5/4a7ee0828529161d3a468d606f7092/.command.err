@@ -1,0 +1,8 @@
+
+[build] loading fasta file transcripts.fasta.gz
+[build] k-mer length: 31
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 27 contigs and contains 22118 k-mers 
+

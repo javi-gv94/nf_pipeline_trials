@@ -1,0 +1,13 @@
+{
+	"n_targets": 14,
+	"n_bootstraps": 0,
+	"n_processed": 10000,
+	"n_pseudoaligned": 9413,
+	"n_unique": 7174,
+	"p_pseudoaligned": 94.1,
+	"p_unique": 71.7,
+	"kallisto_version": "0.45.0",
+	"index_version": 10,
+	"start_time": "Fri Jan 25 13:37:55 2019",
+	"call": "kallisto quant --index=index.idx --output=./out reads_1.fastq.gz reads_2.fastq.gz"
+}
